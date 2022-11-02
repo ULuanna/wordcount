@@ -19,7 +19,11 @@ func main() {
 
 // wordCount returns number of words (separated by space) in source string.
 func wordCount(src string) int {
-	return len(strings.Split(strings.TrimSpace(src), " "))
+	srcTrimed := strings.TrimSpace(src)
+	if srcTrimed == "" {
+		return 0
+	}
+	return len(strings.Split(srcTrimed, " "))
 }
 
 // readInput reads pattern and source string
@@ -27,8 +31,7 @@ func wordCount(src string) int {
 func readInput() (src string, err error) {
 	argsWithoutProg := os.Args
 	if len(argsWithoutProg) == 1 {
-		src = ""
-		return src, nil
+		return "", nil
 	} else if len(argsWithoutProg) > 2 {
 		return src, errors.New("too many arguments")
 	}
