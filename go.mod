@@ -1,4 +1,3 @@
-// -- more/go.mod --
-module example.com/mod/v2
+module github.com/gothanks/match
 
 go 1.18
