@@ -27,7 +27,8 @@ func wordCount(src string) int {
 func readInput() (src string, err error) {
 	argsWithoutProg := os.Args
 	if len(argsWithoutProg) == 1 {
-		return src, errors.New("missing string to match")
+		src = ""
+		return src, nil
 	} else if len(argsWithoutProg) > 2 {
 		return src, errors.New("too many arguments")
 	}
