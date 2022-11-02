@@ -1,3 +1,3 @@
-module github.com/gothanks/match
+module github.com/ULuanna/wordcount
 
 go 1.18
