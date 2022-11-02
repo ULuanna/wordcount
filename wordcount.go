@@ -12,7 +12,7 @@ func main() {
 	if err != nil {
 		fail(err)
 	}
-	fmt.Println(src)
+	//fmt.Println(src)
 	numOfWords := wordCount(src)
 	fmt.Println(numOfWords)
 }
